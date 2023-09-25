@@ -1,10 +1,7 @@
 package com.rest.serviceimpl;
-import java.beans.Beans;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +11,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rest.dto.StudentDtoReq;
 import com.rest.dto.StudentDtoRes;
 import com.rest.helpers.PostResponse;
-import com.rest.models.EmailDetails;
 import com.rest.models.Student;
 import com.rest.repositories.StudentRepository;
+import com.rest.services.StudentExcelService;
 import com.rest.services.StudentService;
 
 
@@ -37,7 +30,7 @@ public class StudentServiceImpl implements StudentService {
 	private StudentEmailService emailService;
 
 	@Autowired
-	private com.rest.services.StudentExcelService excelService;
+	private StudentExcelService excelService;
 	
 	private Student stud=new Student();
 

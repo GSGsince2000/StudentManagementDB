@@ -37,8 +37,8 @@ public class StudentController{
 	// for extra security
 	private final StudentService stuService;
 
-	public StudentController(StudentService stuService) {
-		this.stuService = stuService;
+	public StudentController(StudentService stuService1) {
+		this.stuService = stuService1;
 	}
 
 	@Autowired
